@@ -1,16 +1,16 @@
 import  express = require('express');
 let router = express.Router();
 
-/* GET home page. -default */
+/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'Express' });
 });
 
 module.exports = router;
 
-/* GET home page. -home */
+/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'Express' });
 });
 
 module.exports = router;

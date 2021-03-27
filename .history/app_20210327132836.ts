@@ -34,11 +34,14 @@ app.use(function(err:createError.HttpError, req:express.Request, res:express.Res
   // set locals, only providing error in development
 
   let message = err.message;
-  let error = req.app.get('env') === 'development' ? err : {};
+  let  error = req.app.get('env') === 'development' ? err : {};
+
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error', {message: message, error: error});
+  res.render('error', {title: ""});
 });
 
 module.exports = app;

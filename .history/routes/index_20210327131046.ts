@@ -10,7 +10,7 @@ module.exports = router;
 
 /* GET home page. -home */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'Express' });
 });
 
 module.exports = router;
