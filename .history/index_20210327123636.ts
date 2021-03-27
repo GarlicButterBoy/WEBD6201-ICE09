@@ -5,10 +5,8 @@
  */
  
 let app = require('./app');
-import createError = require('http-errors');
 const debug = require('debug')('ice09:server');
 import http = require('http');
-import { HttpError } from 'http-errors';
 
 /**
  * Get port from environment and store in Express.
@@ -58,7 +56,7 @@ function normalizePort(val:string) :string | number | boolean
  * Event listener for HTTP server "error" event.
  */
 
-function onError(error:createError.HttpError) : void
+function onError(error)
 {
   if (error.syscall !== 'listen') 
   {
@@ -89,7 +87,7 @@ function onError(error:createError.HttpError) : void
  * Event listener for HTTP server "listening" event.
  */
 
-function onListening() :void
+function onListening() 
 {
   let addr = server.address();
   let bind = typeof addr === 'string'

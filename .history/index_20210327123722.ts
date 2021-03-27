@@ -58,7 +58,7 @@ function normalizePort(val:string) :string | number | boolean
  * Event listener for HTTP server "error" event.
  */
 
-function onError(error:createError.HttpError) : void
+function onError(error:createError.HttpError)
 {
   if (error.syscall !== 'listen') 
   {
@@ -89,7 +89,7 @@ function onError(error:createError.HttpError) : void
  * Event listener for HTTP server "listening" event.
  */
 
-function onListening() :void
+function onListening() 
 {
   let addr = server.address();
   let bind = typeof addr === 'string'
