@@ -38,7 +38,7 @@ router.get('/login', function(req, res, next) {
 
 /* GET login page. -register */
 router.get('/register', function(req, res, next) {
-  res.render('index', { title: 'Register', page: 'register' });
+  res.render('index', { title: 'Login', page: 'login' });
 });
 
 module.exports = router;

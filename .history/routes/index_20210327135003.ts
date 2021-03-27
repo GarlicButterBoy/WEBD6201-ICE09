@@ -13,32 +13,27 @@ router.get('/home', function(req, res, next) {
 
 /* GET about page. -about */
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About Us', page: 'about' });
+  res.render('index', { title: 'About', page: 'home' });
 });
 
 /* GET projects page. -projects */
 router.get('/projects', function(req, res, next) {
-  res.render('index', { title: 'Our Projects', page: 'projects' });
+  res.render('index', { title: 'Projects', page: 'home' });
 });
 
 /* GET services page. -services */
 router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Our Services', page: 'services' });
+  res.render('index', { title: 'Services', page: 'home' });
 });
 
 /* GET contact page. -contact */
 router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact Us', page: 'contact' });
+  res.render('index', { title: 'Contact Us', page: 'home' });
 });
 
 /* GET login page. -login */
 router.get('/login', function(req, res, next) {
-  res.render('index', { title: 'Login', page: 'login' });
-});
-
-/* GET login page. -register */
-router.get('/register', function(req, res, next) {
-  res.render('index', { title: 'Register', page: 'register' });
+  res.render('index', { title: 'Login', page: 'home' });
 });
 
 module.exports = router;
